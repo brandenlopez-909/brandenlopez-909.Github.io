@@ -5,6 +5,7 @@ subtitle: Detecting Tweets that Advertise Illicit Drugs
 gh-repo: https://github.com/parkervg/OpioidTwitter
 tags: [NLP, Machine Learning, Deep Learning]
 comments: true
+image: /_posts/good_tweets_wordcloud.png
 
 ---
 # Abstract
