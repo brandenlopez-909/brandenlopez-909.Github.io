@@ -27,14 +27,6 @@ comments: true
 
 Data was scraped using the Twitter API. Keywords from a list of 9 prevalent opioids (codeine, hydrocodone, morphine, oxycodone, hydromorphone, fentanyl, oxycontin, vicodin, and percocet) were entered in Twitter’s search endpoint, and the tweet content and metadata was scraped and stored in a Postgresql database.
 
- 
-| id | tweet_id | content  created_at | fav_count | url_present | user_name   | followers_count | friends_count |                                                                                                       
-| 3  | 1.18E+18 | Three #Chinese nationals were charged with importing and distributing #Fentanyl as part of an international drug op‚Ä¶ https://t.co/pF6AlZf2wW | 10/10/19   | 164       | TRUE        | EpochTimes  | 134594          | 102           | 
-| 4  | 1.18E+18 | Boston is using a chemical warfare device to help fight fentanyl https://t.co/gqJURUHwnH via @commonhealth                                     | 10/11/19   | 0         | TRUE        | BUSPH       | 27642           | 2202          | 
-| 5  | 1.18E+18 | Dana Point Rehab Campus CEO Michael Castanon Discusses the Fentanyl Crisis on CBS-LA https://t.co/tYigh2TJOG                                   | 10/11/19   | 0         | TRUE        | feed_stocks | 357             | 103           | 
-| 9  | 1.18E+18 | @Praying_Medic China has to put an end to the manufacturing of illicit fentanyl or NO DEAL!!                                                   | 10/11/19   | 0         | FALSE       | MesiaArte   | 1286            | 1080          | 
-
-
 Data sets are often “unclean” or could be expanded upon. Our data set was the same, within our data every tweet contains an abbreviated twitter link. To make a more robust dataset, we decided to expand these local URLs to global URLs. Using the “requests” library we were able to expand the URLs of over 40,000 tweets. There were many difficulties when doing this, for instance twitter servers deny requests when attempting to access so many of them, and the “get” function is slow. With no way around this, we had to use a virtual machine to free up our PCs’.  
     GCP - Compute engine: Google Cloud Platform offers many services that are beneficial to data enthusiasts. Using Compute Engine we were able to: push and pull to github, and run scripts on this virtual machine. It is with this we ran the code to extend the URLS and then classify them as going to twitter, or to and outside source. 
 
