@@ -47,9 +47,9 @@ Having processed our text data into numerical matrices, we employed exploratory 
 Below depicts word usage across the two types of tweets with the original set of 9 opioids omitted, along with traditional English stopwords. The filtered output includes only words falling into the categories "Verb", "Adjective", "Adverb" or "Noun".
 
 
-![](/_posts/good_tweets_wordcloud.png)
+![Good_tweets](/_posts/good_tweets_wordcloud.png)
 
-![])(/_posts/bad_tweets_wordcloud.png)
+![Bad_tweets](/_posts/bad_tweets_wordcloud.png)
 
 #### Clustering 
 K-means is a very popular way of exploring data. In our project we decided to use K Means Clustering to see some differences in our data. As you probably know, K-means looks for groups in data and tries to minimize the euclidean distance of each centroid. Unfortunately it is not easy to pick the amount of centroids we want, and the traditional elbow method would not work for our data. So we used two other methods, Brendan used the “Scoring” method and Branden used the “BIC” method.
