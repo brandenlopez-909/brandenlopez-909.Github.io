@@ -543,7 +543,7 @@ for( i in 1:3){
 } 
 ```
 
-![7](/posts/figure-markdown_github/unnamed-chunk-19-1.png)
+![7](/_posts/figure-markdown_github/unnamed-chunk-19-1.png)
 
 ``` r
 par(mfrow = c( 1,1))
