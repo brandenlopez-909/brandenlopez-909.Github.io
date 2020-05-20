@@ -132,7 +132,7 @@ Exploratory Data Analysis
 avPlots(test0)
 ```
 
-![Yeet](/_posts/figure-markdown_github/unnamed-chunk-5-1.png)
+![1](/_posts/figure-markdown_github/unnamed-chunk-5-1.png)
 
 Here we view that the most impactful vairbale is tempature. The other variables do have correlations, but not as much as temp.
 
@@ -190,7 +190,7 @@ for( i in 1:3){
   plot( test1 , which = i)}
 ```
 
-![](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![2](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
 ``` r
 par(mfrow = c( 1, 1))
@@ -257,7 +257,7 @@ day_trsf <- with(day, data.frame( hum1 , sqrt(windspeed), temp ))
 pairs(day_trsf)
 ```
 
-![](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-11-1.png)
+![3](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-11-1.png)
 
 ``` r
 windspeed.sqrt <- sqrt(day$windspeed)
@@ -309,7 +309,7 @@ for( i in 1:3){
 } 
 ```
 
-![](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-12-1.png)
+![4](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-12-1.png)
 
 ``` r
 par(mfrow = c( 1, 1))
@@ -323,7 +323,7 @@ In order to fix the violations in linearity-assumptions, we will consider a resp
 bc <- boxCox(test2) 
 ```
 
-![](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![5](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
 ``` r
 lambda.opt <- bc$x[which.max(bc$y)] 
@@ -345,7 +345,7 @@ for( i in 1:3){
 } 
 ```
 
-![](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-14-1.png)
+![6](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
 ``` r
 par(mfrow = c( 1, 1))
@@ -543,7 +543,7 @@ for( i in 1:3){
 } 
 ```
 
-![](/posts/GroupProject_files/figure-markdown_github/unnamed-chunk-19-1.png)
+![7](/posts/GroupProject_files/figure-markdown_github/unnamed-chunk-19-1.png)
 
 ``` r
 par(mfrow = c( 1,1))
@@ -658,7 +658,7 @@ for( i in 1:4){
 }
 ```
 
-![](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-21-1.png)
+![8](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-21-1.png)
 
 ``` r
 par(mfrow = c(1,1))
