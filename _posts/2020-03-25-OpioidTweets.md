@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Opiod Twitter 
+title: Opioid Twitter 
 subtitle: Detecting Tweets that Advertise Illicit Drugs
 gh-repo: https://github.com/parkervg/OpioidTwitter
 gh-badge: [star, fork, follow]
