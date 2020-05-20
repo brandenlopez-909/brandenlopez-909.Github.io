@@ -146,7 +146,7 @@ scatterplotMatrix(~ y + temp + windspeed + hum + factor(season) + factor(mnth) +
     ## Warning in smoother(x[subs], y[subs], col = smoother.args$col[i], log.x =
     ## FALSE, : could not fit negative part of the spread
 
-![](/_posts/GroupProject_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![scatterplot](/_posts/figure-markdown_github/unnamed-chunk-6-1.png)
 
 This is ugly but as we see there must be transformations in order to attain a correlation between predictors and the response.
 
