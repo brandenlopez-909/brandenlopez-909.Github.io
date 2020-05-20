@@ -131,7 +131,7 @@ Exploratory Data Analysis
 ``` r
 avPlots(test0)
 ```
-![1](/_posts/figure-markdown_github/unnamed-chunk-5-1.png)
+![1](/assets/img/funnamed-chunk-5-1.png)
 
 
 Here we view that the most impactful vairbale is tempature. The other variables do have correlations, but not as much as temp.
@@ -146,7 +146,7 @@ scatterplotMatrix(~ y + temp + windspeed + hum + factor(season) + factor(mnth) +
     ## Warning in smoother(x[subs], y[subs], col = smoother.args$col[i], log.x =
     ## FALSE, : could not fit negative part of the spread
 
-![scatterplot](/_posts/figure-markdown_github/unnamed-chunk-6-1.png)
+![scatterplot](/assets/img/unnamed-chunk-6-1.png)
 
 This is ugly but as we see there must be transformations in order to attain a correlation between predictors and the response.
 
@@ -190,7 +190,7 @@ for( i in 1:3){
   plot( test1 , which = i)}
 ```
 
-![2](/_posts/figure-markdown_github/unnamed-chunk-7-1.png)
+![2](/assets/img/unnamed-chunk-7-1.png)
 
 ``` r
 par(mfrow = c( 1, 1))
@@ -257,7 +257,7 @@ day_trsf <- with(day, data.frame( hum1 , sqrt(windspeed), temp ))
 pairs(day_trsf)
 ```
 
-![3](/_posts/figure-markdown_github/unnamed-chunk-11-1.png)
+![3](/assets/img/unnamed-chunk-11-1.png)
 
 ``` r
 windspeed.sqrt <- sqrt(day$windspeed)
@@ -309,7 +309,7 @@ for( i in 1:3){
 } 
 ```
 
-![4](/_posts/figure-markdown_github/unnamed-chunk-12-1.png)
+![4](/assets/img/unnamed-chunk-12-1.png)
 
 ``` r
 par(mfrow = c( 1, 1))
@@ -323,7 +323,7 @@ In order to fix the violations in linearity-assumptions, we will consider a resp
 bc <- boxCox(test2) 
 ```
 
-![5](/_posts/figure-markdown_github/unnamed-chunk-13-1.png)
+![5](/assets/img/unnamed-chunk-13-1.png)
 
 ``` r
 lambda.opt <- bc$x[which.max(bc$y)] 
@@ -345,7 +345,7 @@ for( i in 1:3){
 } 
 ```
 
-![6](/_posts/figure-markdown_github/unnamed-chunk-14-1.png)
+![6](/assets/img/unnamed-chunk-14-1.png)
 
 ``` r
 par(mfrow = c( 1, 1))
@@ -543,7 +543,7 @@ for( i in 1:3){
 } 
 ```
 
-![7](/_posts/figure-markdown_github/unnamed-chunk-19-1.png)
+![7](/assets/img/unnamed-chunk-19-1.png)
 
 ``` r
 par(mfrow = c( 1,1))
@@ -658,7 +658,7 @@ for( i in 1:4){
 }
 ```
 
-![8](/_posts/figure-markdown_github/unnamed-chunk-21-1.png)
+![8](/assets/img/unnamed-chunk-21-1.png)
 
 ``` r
 par(mfrow = c(1,1))
