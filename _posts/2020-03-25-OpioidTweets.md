@@ -47,7 +47,7 @@ Below depicts word usage across the two types of tweets with the original set of
 
 
 
-![Good_tweets](/_posts/good_tweets_wordcloud.png)
+![Good_tweets]({{https://brandenlopez-909.github.io/}}/_posts/good_tweets_wordcloud.png)
 ![Bad_tweets](/_posts/bad_tweets_wordcloud.png)
 
 #### Clustering 
