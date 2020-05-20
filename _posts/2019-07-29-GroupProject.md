@@ -132,7 +132,7 @@ Exploratory Data Analysis
 avPlots(test0)
 ```
 
-![](_posts/figure-markdown_github/unnamed-chunk-5-1.png)
+![Yeet](_posts/figure-markdown_github/unnamed-chunk-5-1.png)
 
 Here we view that the most impactful vairbale is tempature. The other variables do have correlations, but not as much as temp.
 
