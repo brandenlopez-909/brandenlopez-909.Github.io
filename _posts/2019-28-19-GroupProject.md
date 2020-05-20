@@ -1,4 +1,14 @@
-1.  Appendix 2 Exploratory Stuff
+---
+layout: post
+title: Capital Biking System
+subtitle: Data Analysis and Modeling
+gh-repo: https://github.com/parkervg/OpioidTwitter
+tags: [Data Analyis, Modeling, Regression Analysis]
+comments: true
+
+---
+
+
 ================
 
 ``` r
