@@ -9,7 +9,7 @@ comments: true
 
 ---
 # Abstract
-Something good. 
+Over 500 millions tweets are posted in a single day. In today's modern drug markets, illicit pharmacies use Twitter as a medium to advertise to teens. To combat this we use various techniques in data science, to analyze a massize corpus of tweets, attempting to create a model that could detect drug advertisments. 
 
 
 # Contributors
@@ -30,13 +30,13 @@ Something good.
 Data was scraped using the Twitter API. Keywords from a list of 9 prevalent opioids (codeine, hydrocodone, morphine, oxycodone, hydromorphone, fentanyl, oxycontin, vicodin, and percocet) were entered in Twitter’s search endpoint, and the tweet content and metadata was scraped and stored in a Postgresql database (insert table of data).
 
 
-Data sets are often “unclean” or could be expanded upon. Our data set was the same, within our data every tweet contains an abbreviated twitter link. To make a more robust dataset, we decided to expand these local URLs to global URLs. Using the “requests” library we were able to expand the URLs of over 40,000 tweets. There were many difficulties when doing this, for instance twitter servers deny requests when attempting to access so many of them, and the “get” function is slow. With no way around this, we had to use a virtual machine to free up our PCs’.  
-    GCP - Compute engine: Google Cloud Platform offers many services that are beneficial to data enthusiasts. Using Compute Engine we were able to: push and pull to github, and run scripts on this virtual machine. It is with this we ran the code to extend the URLS and then classify them as going to twitter, or to and outside source. 
+Data sets are often “unclean” or could be expanded upon. Our data set was the same, within our data every tweet contains an abbreviated twitter link. To make a more robust dataset, we expanded these local URLs to global URLs. Using the “requests” library we were able to expand the URLs of over 40,000 tweets. There were many difficulties when doing this, for instance twitter servers deny requests when attempting to access so many of them, and the “get” function is slow. With no way around this, we had to use a virtual machine to free up our PCs’.  
+    GCP - Compute engine: Google Cloud Platform offers many services that are beneficial to data enthusiasts. Using Compute Engine we were able to: push and pull to github, and run scripts on this virtual machine. With this we ran the code to extend the URLS and then classify them as going to twitter, or to and outside source. 
 
 
 ## NLP Tasks
 #### Text Pre-Processing
-With help from Parker, we were pointed in the direction of using a TFIDF matrix to create quantitative data from text.To do so we used methods from Brandon Rose. Using lemmatization to change words from third person to first. Stemming to take the roots of each word and changing past tense to present tense. In Tokenization we discard punctuation and break down our stings. Lastly we preprocess the data, getting rid of hashtags, words that are less than two letters and anything we did not want in each string. With all of this we could now use SKlearn’s “tfidfvectorizer” to show how important each word is to our documents and move into other methods such as clustering or topic modeling. 
+With help from a senior Data Science Officer, we were pointed in the direction of using a TFIDF matrix to create quantitative data from text, and methods from Natural Language processing. Using lemmatization to change words from third person to first. Stemming to take the roots of each word and changing past tense to present tense. In Tokenization we discard punctuation and break down our stings. Lastly we preprocess the data, getting rid of hashtags, words that are less than two letters and anything we did not want in each string. With all of this we could now use SKlearn’s “tfidfvectorizer” to show how important each word is to our documents and move into other methods such as clustering or topic modeling. 
 
 
 #### Data Labelling
@@ -49,7 +49,13 @@ Below depicts word usage across the two types of tweets with the original set of
 ![Bad Word Cloud](/_posts/bad_tweets_wordcloud.png)
 
 #### Clustering 
-K-means is a very popular way of exploring data. In our project we decided to use K Means Clustering to see some differences in our data. As you probably know, K-means looks for groups in data and tries to minimize the euclidean distance of each centroid. Unfortunately it is not easy to pick the amount of centroids we want, and the traditional elbow method would not work for our data. So we used two other methods, Brendan used the “Scoring” method and Branden used the “BIC” method…. Insert brief explanations and how we attained these methods and what they do. 
+K-means is a very popular way of exploring data. In our project we decided to use K Means Clustering to see some differences in our data. As you probably know, K-means looks for groups in data and tries to minimize the euclidean distance of each centroid. Unfortunately it is not easy to pick the amount of centroids we want, and the traditional elbow method would not work for our data. So we used two other methods, Brendan used the “Scoring” method and Branden used the “BIC” method.
+
+#### Scoring
+Sklearn has a built-in .score() method to their k-means clustering function that was initially used to determine the optimum number of clusters. However, the score that sklean was using was purely the sum of distances between each data point and the cluster center. This can be a problem when choosing clusters as the variance in the words used is extremely high between texts and inter-cluster as well. This score fluctuates greatly as we vary the cluster number.
+
+#### BIC Method 
+Stemming for the AIC/BIC method from linear regression, complex clusters of data are modeled as a superimposition of a large number of Gaussian datasets. The BIC method penalizes a large number of Gaussians and tries to keep the model simple enough to explain the given data pattern.
 
 #### LDA
 One route for data exploration was use of Latent Dirichlet Allocation (LDA). When told how many topics to produce, the model attempts to provide that many topics across the entire corpus. While it does do the best job of directly finding relevant tweets (the documents of the corpus that the model is finding topics for), it allows us to find terms that are commonly occurring with other words/phrases we know come up often in illicit opioid sales tweets. This includes “bitcoin” and “without prescription.”
@@ -60,17 +66,13 @@ All the above tasks are traditional statistical methods for discovering patterns
 ## Classification Tasks
 
 #### Random Forest
-After exploring the data, we aimed to build a model that would detect the tweets that were selling drugs, we first decided to use a random forest because it does well with imbalanced data sets. A random forest is a decision tree that looks at the most important predictors, and attempts to lead us to the correct response. Using only the tf-idf matrix, we attempted to create a model but ran into an issue it was too precise. It classified most things as not selling illicit drugs and since most of the data was not selling illicit drugs, it achieved a high score. In order to combat this we attempted upsampling, downsampling, synthetic sampling, and we even added an extra attribute to our matrix. Nothing worked well due to the how imbalanced the data set was so we decided to use a model that is more suited for anomaly detection, the Variational autoencoder. 
+After exploring the data, we aimed to build a model that would detect the tweets that were selling drugs. We first decided to use a random forest, because it does well with imbalanced data sets. A random forest is a decision tree that looks at the most important predictors, and attempts to lead us to the correct response. Using only the tf-idf matrix, we attempted to create a model but ran into an issue it was too precise. It classified most things as not selling illicit drugs and since most of the data was not selling illicit drugs, it achieved a high score. In order to combat this we attempted upsampling, downsampling, synthetic sampling, and we even added an extra attribute to our matrix. Nothing worked well due to the how imbalanced the data set was so we decided to use a model that is more suited for anomaly detection, the Variational autoencoder. 
 
 #### Variational Autoencoder (VAE)
 Autoencoders are a type of neural network often used for compression. The inputs the network is trained on is a subset of the domain that the autoencoder should be able to compress and the expected output is the same as the input. The key to an autoencoder is that the hidden layers get progressively smaller and then progressively bigger. This means that the network has to learn a representation of the data that will preserve all the information(so that it can be decompressed in the following layers and give the correct output), but takes up less space than the actual input. We used restoration loss for our autoencoder. Autoencoders work well for anomaly detection. A well trained autoencoder that is unable to reproduce the input data in the output layers indicates that the data was not something the network encountered when it was trained and was thus one for which it was unable to learn a limited representation. We trained the network on more than 10000 inputs/tweets. Each of which had information regarding the number of followers the person tweeting had, number of people the person tweeting follows, whether the tweet leads to an outside url, and of course, all the values of the TF-IDF matrix of the tweet.
-(include picture of autoencoder)
 
-## Summary 
-#### Key Results 
-How much we learned. 
+## Conclusion
 
 #### Problems Encountered
 One unexpected problem that appeared in our data was a rap album released prior to our data wrangling. One of the most popular songs on the album was titled “Codeine Crazy”, which meant that the keyword search Parker used caught thousands of tweets about the album. This specific issue represents a larger problem with our goal. Hard drugs have been a large part of hip hop culture for a long time, and this culture is becoming more and more ingrained with the mainstream. Casual tweets about hard drugs are relatively common, which means that illegal, online “pharmacies” are able to advertise on social media safely hidden among the thousands of regular posts. This may be one of the reasons why Twitter has not been successful in preventing illegal drug selling on their platform.
 
-#### Future Work
