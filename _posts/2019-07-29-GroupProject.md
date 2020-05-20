@@ -9,6 +9,13 @@ comments: true
 ---
 
 
+
+Preliminary observations
+========================
+
+Welcome to the capital bike share data set. Today we will be exploring the relationship between different variables and how they impact total bike count in future settings..
+Before we dive into exploratory data analysis, we will vet the data for any irregularites and remove them as fit.
+
 ================
 
 ``` r
@@ -17,12 +24,7 @@ library(alr4)
 library(dplyr)
 day <- read_csv("~/126 Regression/Bike-Sharing-Dataset/day.csv")
 ```
-
-Preliminary observations
-========================
-
-Welcome to the capital bike share data set. Today we will be exploring the relationship between different variables and how they impact total bike count in future settings..
-Before we dive into exploratory data analysis, we will vet the data for any irregularites and remove them as fit.
+================
 
     ## Warning in summary.lm(test0): essentially perfect fit: summary may be
     ## unreliable
