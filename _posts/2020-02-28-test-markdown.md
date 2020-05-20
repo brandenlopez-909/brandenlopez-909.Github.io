@@ -25,12 +25,10 @@ comments: true
 
 ## Methodology - Data Cleaning
 
-Data was scraped using the Twitter API. Keywords from a list of 9 prevalent opioids (codeine, hydrocodone, morphine, oxycodone, hydromorphone, fentanyl, oxycontin, vicodin, and percocet) were entered in Twitter’s search endpoint, and the tweet content and metadata was scraped and stored in a Postgresql database (insert table of data).
+Data was scraped using the Twitter API. Keywords from a list of 9 prevalent opioids (codeine, hydrocodone, morphine, oxycodone, hydromorphone, fentanyl, oxycontin, vicodin, and percocet) were entered in Twitter’s search endpoint, and the tweet content and metadata was scraped and stored in a Postgresql database.
 
-
-|    |          |                                                                                                                                                |            |           |             |             |                 |               | 
-|----|----------|------------------------------------------------------------------------------------------------------------------------------------------------|------------|-----------|-------------|-------------|-----------------|---------------| 
-| id | tweet_id | content                                                                                                                                        | created_at | fav_count | url_present | user_name   | followers_count | friends_count | 
+ 
+| id | tweet_id | content  created_at | fav_count | url_present | user_name   | followers_count | friends_count |                                                                                                       
 | 3  | 1.18E+18 | Three #Chinese nationals were charged with importing and distributing #Fentanyl as part of an international drug op‚Ä¶ https://t.co/pF6AlZf2wW | 10/10/19   | 164       | TRUE        | EpochTimes  | 134594          | 102           | 
 | 4  | 1.18E+18 | Boston is using a chemical warfare device to help fight fentanyl https://t.co/gqJURUHwnH via @commonhealth                                     | 10/11/19   | 0         | TRUE        | BUSPH       | 27642           | 2202          | 
 | 5  | 1.18E+18 | Dana Point Rehab Campus CEO Michael Castanon Discusses the Fentanyl Crisis on CBS-LA https://t.co/tYigh2TJOG                                   | 10/11/19   | 0         | TRUE        | feed_stocks | 357             | 103           | 
