@@ -45,8 +45,9 @@ Having processed our text data into numerical matrices, we employed exploratory 
 "`Buy GHB, Adderall, Alprazolam, Ritalin, Ketamine HCL, MDMA, Fentanyl online without prescription Contact us: Phon… https://t.co/6WhgXP71bp`"
 
 Below depicts word usage across the two types of tweets with the original set of 9 opioids omitted, along with traditional English stopwords. The filtered output includes only words falling into the categories "Verb", "Adjective", "Adverb" or "Noun".
-![Good Word Cloud](/_posts/good_tweets_wordcloud.png)
-![Bad Word Cloud](/_posts/bad_tweets_wordcloud.png)
+
+[Good Word Cloud](/_posts/good_tweets_wordcloud.png)
+[Bad Word Cloud](/_posts/bad_tweets_wordcloud.png)
 
 #### Clustering 
 K-means is a very popular way of exploring data. In our project we decided to use K Means Clustering to see some differences in our data. As you probably know, K-means looks for groups in data and tries to minimize the euclidean distance of each centroid. Unfortunately it is not easy to pick the amount of centroids we want, and the traditional elbow method would not work for our data. So we used two other methods, Brendan used the “Scoring” method and Branden used the “BIC” method.
