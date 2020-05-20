@@ -8,17 +8,8 @@ comments: true
 
 ---
 
----
-title: "8. Appendix 2 Exploratory Stuff"
-output:
-  word_document: default
-  pdf_document: default
-  html_document: default
----
+rmarkdown::render_site()
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 
 ```{r, message= FALSE, warning=FALSE}
