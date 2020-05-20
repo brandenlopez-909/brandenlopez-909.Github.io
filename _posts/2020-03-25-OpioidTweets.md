@@ -46,8 +46,10 @@ Having processed our text data into numerical matrices, we employed exploratory 
 Below depicts word usage across the two types of tweets with the original set of 9 opioids omitted, along with traditional English stopwords. The filtered output includes only words falling into the categories "Verb", "Adjective", "Adverb" or "Noun".
 
 
+<img src="/_posts/good_tweets_wordcloud.png" height="300">
 
 ![Good_tweets]({https://brandenlopez-909.github.io/}/_posts/good_tweets_wordcloud.png)
+
 ![Bad_tweets](/_posts/bad_tweets_wordcloud.png)
 
 #### Clustering 
