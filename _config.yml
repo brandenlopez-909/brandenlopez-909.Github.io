@@ -36,8 +36,8 @@ round-avatar: false
 # If you don't want to show a link to an RSS feed, set rss to "false".
 social-network-links:
   email: blopez4148@gmail.com
-  facebook: "https://www.facebook.com/branden.lopez.79"
-  github: "https://github.com/brandenlopez-909"
+  facebook: www.facebook.com/branden.lopez.79
+  github: github.com/brandenlopez-909
   rss: true
 #  reddit: yourname
 #  linkedin: daattali
