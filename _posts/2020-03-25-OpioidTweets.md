@@ -5,7 +5,6 @@ subtitle: Detecting Tweets that Advertise Illicit Drugs
 gh-repo: https://github.com/parkervg/OpioidTwitter
 tags: [NLP, Machine Learning, Deep Learning]
 comments: true
-image: /_posts/good_tweets_wordcloud.png
 
 ---
 # Abstract
@@ -46,10 +45,10 @@ Having processed our text data into numerical matrices, we employed exploratory 
 
 Below depicts word usage across the two types of tweets with the original set of 9 opioids omitted, along with traditional English stopwords. The filtered output includes only words falling into the categories "Verb", "Adjective", "Adverb" or "Noun".
 
-image: /_posts/good_tweets_wordcloud.png
+image: "https://github.com/brandenlopez-909/brandenlopez-909.github.io/blob/master/_posts/good_tweets_wordcloud.png"
 
 
-![Good_tweets](/_posts/good_tweets_wordcloud.png)
+![Good_tweets](https://github.com/brandenlopez-909/brandenlopez-909.github.io/blob/master/_posts/good_tweets_wordcloud.png)
 
 ![Bad_tweets](/_posts/bad_tweets_wordcloud.png)
 
