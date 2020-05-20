@@ -10,8 +10,8 @@ Transferring to UCSB in 2018, I came in as a Math Sciences major with a minor in
 
 Outside of academia I love spending time with my girlfriend, trying new reciepes, and bettering myself.
 
-- Favoirte Recipe: [Ramen](https://www.foxandbriar.com/easy-chicken-ramen/)
+- Favoirte recipe: [Ramen](https://www.foxandbriar.com/easy-chicken-ramen/)
 
-- Favorite Book: [Surely You're Joking, Mr.Feynman!](https://en.wikipedia.org/wiki/Surely_You%27re_Joking,_Mr._Feynman!)
+- Favorite book: [Surely You're Joking, Mr.Feynman!](https://en.wikipedia.org/wiki/Surely_You%27re_Joking,_Mr._Feynman!)
 
-- When I'm Angry: [The Egg](https://www.youtube.com/watch?v=h6fcK_fRYaI&t=3s)
+- Favorite Youtube video: [The Egg](https://www.youtube.com/watch?v=h6fcK_fRYaI&t=3s)
