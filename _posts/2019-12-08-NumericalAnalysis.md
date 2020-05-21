@@ -37,7 +37,8 @@ The code is presented in a separate file and all models are contained in it. For
 Tesla:
 
 $$S_{11}(x)=225.610001\ -58.96300781607924(x-11)\ +\ 111.33450272411883\left(x-11\right)^2\ -37.11150090803961\left(x-11\right)^3$$
-	Closing error: 18.668240052435162%	Rate of return error: 79.39231561024066%
+	
+$$ \text{Closing error: } 18.668240052435162\% \quad	\text{Rate of return error: } 79.39231561024066\% $$
 Microsoft: 
 
 $$S_{11}\left(x\right)=137.860001+3.6521913144859712\left(x-11\right)-3.723289971728968\left(x-11\right)^2+1.2410966572429893\left(x-11\right)^3$$
