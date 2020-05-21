@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Portfolio Theory: Optimal rates of return, and future interpolation."
+title:  "Portfolio Theory: Optimal rates of return, and interpolation."
 subtitle: Modeling rates of return using techniques in Numerical Analysis
 tags: [Data Sceince, Numerical Analysis, Finance]
 comments: true
@@ -22,11 +22,11 @@ Lastly, we used knowledge of portfolio weights, determined rates of returns, and
 # Results:
 While the LaGrange interpolating polynomial did work, we found that like the forward difference polynomial, it often oscillated immediately after the nodes it matched. Thus, the workable model is the Natural Cubic Spline.
 Natural Cubic Spline polynomials are less prone to oscillations and can handle many nodes. Because of this it interpreted the historic data with the least error. The only issue is that going more than one month(node) past the last known month, unrealistic change occurs (Shown in figure2).    
-Figure 2: In this we see the last polynomial created using Natural Cubic Spline Interpolation for TSLA. That is s_{11}\left(x\right) where x_{11}<x<x_{12}, and x_{11} is the closing price for August and x_{12} is the closing price for September TSLA stock.
+Figure 2: In this we see the last polynomial created using Natural Cubic Spline Interpolation for TSLA. That is $s_{11}\left(x\right)$ where $x_{11}<x<x_{12}$, and $x_{11}$ is the closing price for August and $x_{12}$ is the closing price for September TSLA stock.
 
 While it would be best to interpolate long term closing prices on the stock market, we are constrained to one month past known data. Using interpolated closing price, and the portfolio weights, we are now able to view the return for October (Figure 4).
 
-Our interpolated figures result in a negative rate of return for the month of October. Comparing this to the standard deviation of the portfolio, \rho_p=63%\ we find the we are roughly 0.23 standard deviations away from expected return, a very likely possibility. Looking at the results we should aim to create a portfolio that lies on the frontier curve, but it is important to note that for some months the deviation might work in our favor, creating a very desirable rate of return. 
+Our interpolated figures result in a negative rate of return for the month of October. Comparing this to the standard deviation of the portfolio, $\rho_p=63\%$ we find the we are roughly 0.23 standard deviations away from expected return, a very likely possibility. Looking at the results we should aim to create a portfolio that lies on the frontier curve, but it is important to note that for some months the deviation might work in our favor, creating a very desirable rate of return. 
 Statistically, the results from the portfolio are plausible, further statistical analysis might prove that individually they are not. Comparing the interpolated return rates to the actual rates we have (Figure 5).
     
 Thus, the interpolated rate of return, didn’t perform too poorly. 
