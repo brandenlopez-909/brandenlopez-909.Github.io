@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Portfolio Theory: Optimal rates of return, and future interpolation.
+title:  "Portfolio Theory: Optimal rates of return, and future interpolation."
 subtitle: Modeling rates of return using techniques in Numerical Analysis
 tags: [Data Sceince, Numerical Analysis, Finance]
 comments: true
