@@ -18,8 +18,10 @@ With a criterion in mind, we need some way to value the stocks. Yahoo finance wa
  
 ![Equation1](/assets/img/numerical/Equation1.png)
 ![Figure1](/assets/img/numerical/Figure1.png)
+
 Despite using methods in statistics and LRO, we want to interpolate the future returns. With equation 1 we aimed to find the next month’s closing price, and thus the rate of return. First, we built a LaGrange interpolating polynomial; secondly, we created a Natural Cubic Spline Model and compared the results. While other models were considered, they were omitted due to reliance on derivatives; likewise, forward difference interpolation was a prime candidate but performed terribly immediately after the nodes the data provides.
 Lastly, we used knowledge of portfolio weights, determined rates of returns, and covariance matrix to find the variance of rate of return (Equation 3)
+
 ![Equation3](/assets/img/numerical/Equation3.png)
 
 # Results:
@@ -30,6 +32,7 @@ Figure 2: In this we see the last polynomial created using Natural Cubic Spline 
 While it would be best to interpolate long term closing prices on the stock market, we are constrained to one month past known data. Using interpolated closing price, and the portfolio weights, we are now able to view the return for October (Figure 4).
 
 ![Figure4](/assets/img/numerical/Figure4.png)
+
 Our interpolated figures result in a negative rate of return for the month of October. Comparing this to the standard deviation of the portfolio, $\rho_p=63\%$ we find the we are roughly 0.23 standard deviations away from expected return, a very likely possibility. Looking at the results we should aim to create a portfolio that lies on the frontier curve, but it is important to note that for some months the deviation might work in our favor, creating a very desirable rate of return. 
 Statistically, the results from the portfolio are plausible, further statistical analysis might prove that individually they are not. Comparing the interpolated return rates to the actual rates we have (Figure 5).
 
