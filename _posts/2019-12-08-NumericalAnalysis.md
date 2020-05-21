@@ -42,18 +42,20 @@ $$ \text{Closing error: } 18.668240052435162\% \quad	\text{Rate of return error:
 Microsoft: 
 
 $$S_{11}\left(x\right)=137.860001+3.6521913144859712\left(x-11\right)-3.723289971728968\left(x-11\right)^2+1.2410966572429893\left(x-11\right)^3$$
-	Closing error: 2.2110609685101774%	Rate of return error: 73.0414958907797%
+$$ \text{Closing error: }2.2110609685101774\%	\quad \text{Rate of return error: } 73.0414958907797\% $$
+
 Axovant:
 
 $$S_{11}\left(x\right)=7.03+0.291900907206438\left(x-11\right)-1.2928513608096575\left(x-11\right)^2+0.43095045360321915\left(x-11\right)^3$$
-	Closing error: 4.6925566343042076%	Rate of return error: 103.5714285714285%
+$$ \text{Closing error: } 4.6925566343042076\% \quad	\text{Rate of return error: } 103.5714285714285\% $$
+
 Google:
 
 $$S_{11}\left(x\right)=1190.530029-192.498282237711\left(x-11\right)+334.6624023565664\left(x-11\right)^2-111.55413411885547\left(x-11\right)^3$$
-	Closing error: 0.6634328828050805%	Rate of return error: 25.671724707182714%
+$$ \text{Closing error: } 0.6634328828050805\% \quad	\text{Rate of return error: } 25.671724707182714\% $$
 Northrop: 
 
 $$S_{11}\left(x\right)=367.869995+37.67562337086028\left(x-11\right)-46.13341405629045\left(x-11\right)^2+15.37780468543015\left(x-11\right)^3$$
-	Closing error 8.292672233263176%	Rate of return error: 131.01754648297135%
+$$ \text{Closing error } 8.292672233263176\% \quad	\text{Rate of return error: }131.01754648297135\% $$
 
 
