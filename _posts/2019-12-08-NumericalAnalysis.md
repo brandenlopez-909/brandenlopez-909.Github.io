@@ -2,6 +2,7 @@
 layout: post
 title:  "Portfolio Theory: Optimal rates of return, and interpolation."
 subtitle: Modeling rates of return using techniques in Numerical Analysis
+gh-repo: https://github.com/brandenlopez-909/RepositoryHub/tree/master/Portfolio%20Theory%20Interpolation
 tags: [Data Sceince, Numerical Analysis, Finance]
 comments: true
 
