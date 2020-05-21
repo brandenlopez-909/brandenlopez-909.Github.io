@@ -2,7 +2,7 @@
 layout: post
 title: Capital Biking System
 subtitle: Data Analysis and Modeling
-gh-repo: https://github.com/parkervg/OpioidTwitter
+gh-repo: https://github.com/brandenlopez-909/RepositoryHub/tree/master/Capital%20Bike%20Sharing
 tags: [Data Analyis, R ,Modeling, Regression Analysis]
 comments: true
 
