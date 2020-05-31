@@ -15,7 +15,7 @@ Preliminary observations
 
 In the Capital Bike Share data set, we will be exploring the relationship of the variables and how they impact consumer rentals of bikes, in the Washington D.C Area. 
 
-Performing simply data analysis, we vet the data for any irregularites within the data, look for any repeated data types and remove them.
+Performing simple data analysis, we vet the data for any irregularites within the data, look for any repeated data types and remove them.
 
 ================
 
@@ -63,7 +63,7 @@ day <- read_csv("~/126 Regression/Bike-Sharing-Dataset/day.csv")
     ## Multiple R-squared:      1,  Adjusted R-squared:      1 
     ## F-statistic: 7.944e+31 on 14 and 716 DF,  p-value: < 2.2e-16
 
-The table above tells alarms usm with standard deviation, that the variables casual and registered are potientally the same thing. further research shows that they are subsets of our real response in the data. Removing these we clarify our goal, to predict future bike rentals from historical data on total bike rentals and a list of envrionmental factors. With this in mind we remove the categorical variable, year as we do want to predict the future, instead of the past.
+The table above alarms use with standard deviation, that the variables casual and registered are potientally the same thing. Further research shows that they are subsets of our real response in the data. Removing these we clarify our goal, to predict future bike rentals from historical data on total bike rentals from a list of envrionmental factors. With this in mind we remove the categorical variable, year as we do want to predict the future, instead of the past.
 
 ``` r
 day <- select(day,  c(- casual, - registered, - instant, - dteday, -yr) ) 
@@ -100,7 +100,7 @@ summary(test0)
     ## Multiple R-squared:  0.528,  Adjusted R-squared:  0.5214 
     ## F-statistic: 80.53 on 10 and 720 DF,  p-value: < 2.2e-16
 
-The summary above tells us, many things from the surface appear to be fine. To verify this we check for redundant variables using VIF. Vif uses statistics to view the co-variances of predictors and if there are two varaibles with a high co-variances, then they might be telling the same story.
+The summary above tells us, many things from the surface appear to be fine. To verify this we check for redundant variables using VIF. VIF uses statistics to view the co-variances of predictors and if there are varaibles with a high co-variances, then they might be telling the same story.
 
 ``` r
 vif(test0)
@@ -111,7 +111,7 @@ vif(test0)
     ##       temp      atemp        hum  windspeed 
     ##  63.317230  64.343265   1.888988   1.197228
 
-Having returned the correlation it is clear that atemp and temp has the highest co-variances. This makes sense as atemp, is temp adjusted for forcasting mistakes. It is worth to note that while we can see that two things are essentially the same, VIF can garentee our assumptions with quantitative results. 
+Having returned the correlation, it is clear that atemp and temp has the highest co-variances. This makes sense as atemp, is temp adjusted for forcasting mistakes. It is worth to note that while we can see that two things are essentially the same, VIF can garentee our assumptions with quantitative results. 
 
 ``` r
 day <- select(day,  c(- atemp, - cnt ))
@@ -136,9 +136,9 @@ avPlots(test0)
 ```
 ![1](/assets/img/unnamed-chunk-5-1.png)
 
-Above we saw that tempature is the data that will be best for using a linear model. To further verify this we must disect the relationship each variable has with one another. This will show us the general shape variables take when compared to one another. 
+Above we saw that tempature is the data, that will be best for using a linear model. To further verify this we must disect the relationship each variable has with one another. This will show us the general shape variables take when compared to one another, which is crucial when determining how to model data. 
 
-The scatterplot matrix is useful for showing how two variables correlate and impact each other. It iss useful for transforming variables to fit our model. Viewing this, we see that many data types against one anothe have a linear fit, while other variables follow logarithmic shapes, or shapes we cannot describe.
+The scatterplot matrix is useful for showing how two variables correlate and impact each other. It iss useful for transforming variables to fit our model. Viewing this, we see that many data types against one another have a linear fit, while other variables follow logarithmic shapes, or shapes we cannot describe.
 
 ``` r
 scatterplotMatrix(~ y + temp + windspeed + hum + factor(season) + factor(mnth) + factor(holiday) + factor(weekday) + factor(workingday) + factor(weathersit) , data =day)
@@ -248,7 +248,7 @@ summary(diag1)
     ##                                LRT df       pval
     ## LR test, lambda = (1 1 1) 64.12643  3 7.7161e-14
 
-Adding the small constant, it has a small impact on the data and so windspeed should have a square root transformation.
+Adding the small constant, it has a small impact on the data and the results inform us windspeed should have a square root transformation.
 
 ``` r
 testTransform(diag1, lambda = c(1, .5, 1))
@@ -257,7 +257,7 @@ testTransform(diag1, lambda = c(1, .5, 1))
     ##                                  LRT df    pval
     ## LR test, lambda = (1 0.5 1) 3.818622  3 0.28173
 
-Here we get a small score for the Linear Regression Test, which is very good and indicated that the data is now following linear properties.
+Here we get a smaller score for the Linear Regression Test, which indicates that the data is potentially following linear properties.
 
 Below we  visualizing the relationship of our predictors.
 
@@ -545,9 +545,9 @@ summary(BIC.factor)
     ## Multiple R-squared:  0.5971, Adjusted R-squared:  0.5926 
     ## F-statistic: 133.7 on 8 and 722 DF,  p-value: < 2.2e-16
 
-To better understant if this model performs well, we analyze the R squared value. This value gives the proportion of variance in the dependent variable that is predicted from the independent variable. 
+To better understant if this model performs well, we analyze the R-squared value. This value gives the proportion of variance in the dependent variable that is predicted from the independent variable. 
 
-From the summary we see that our *R* squared increased and Residual standard error decreased. This is good. In the chart we have an issue with the p-value for factor(weekday)\[1\]. This is not grounds to remove it, it just implies that the slope for factor(weekday)\[1\] is possibly 0.
+From the summary we see that our R-squared increased and Residual Standard Error decreased. This is good. In the chart we have an issue with the p-value for factor(weekday)\[1\]. This is not grounds to remove it, it just implies that the slope for factor(weekday)\[1\] is possibly 0.
 
 ``` r
 par(mfrow = c( 1, 3))
