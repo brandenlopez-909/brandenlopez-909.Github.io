@@ -13,8 +13,9 @@ comments: true
 Preliminary observations
 ========================
 
-Welcome to the capital bike share data set. Today we will be exploring the relationship between different variables and how they impact total bike count in future settings..
-Before we dive into exploratory data analysis, we will vet the data for any irregularites and remove them as fit.
+In the Capital Bike Share data set, we will be exploring the relationship of the variables and how they impact consumer rentals of bikes, in the Washington D.C Area. 
+
+Performing simply data analysis, we vet the data for any irregularites within the data, look for any repeated data types and remove them.
 
 ================
 
@@ -62,7 +63,7 @@ day <- read_csv("~/126 Regression/Bike-Sharing-Dataset/day.csv")
     ## Multiple R-squared:      1,  Adjusted R-squared:      1 
     ## F-statistic: 7.944e+31 on 14 and 716 DF,  p-value: < 2.2e-16
 
-This tells us we have other responses we must remove. The other responses are: casual and registered. In addtion to removing those, we will get rid of non-variables. Our motivation is to predict count for future years, thus we must remove the categorical variable, year.
+The table above tells alarms usm with standard deviation, that the variables casual and registered are potientally the same thing. further research shows that they are subsets of our real response in the data. Removing these we clarify our goal, to predict future bike rentals from historical data on total bike rentals and a list of envrionmental factors. With this in mind we remove the categorical variable, year as we do want to predict the future, instead of the past.
 
 ``` r
 day <- select(day,  c(- casual, - registered, - instant, - dteday, -yr) ) 
@@ -99,7 +100,7 @@ summary(test0)
     ## Multiple R-squared:  0.528,  Adjusted R-squared:  0.5214 
     ## F-statistic: 80.53 on 10 and 720 DF,  p-value: < 2.2e-16
 
-From the summary everything appears to be fine, but futher we are going to check for redundant variables using VIF. If there are two varaibles with a high correlation, then one must be removed, preferably the one with the higher number.
+The summary above tells us, many things from the surface appear to be fine. To verify this we check for redundant variables using VIF. Vif uses statistics to view the co-variances of predictors and if there are two varaibles with a high co-variances, then they might be telling the same story.
 
 ``` r
 vif(test0)
@@ -110,7 +111,7 @@ vif(test0)
     ##       temp      atemp        hum  windspeed 
     ##  63.317230  64.343265   1.888988   1.197228
 
-Since atemp has the highest co-variances, we will remove it.
+Having returned the correlation it is clear that atemp and temp has the highest co-variances. This makes sense as atemp, is temp adjusted for forcasting mistakes. It is worth to note that while we can see that two things are essentially the same, VIF can garentee our assumptions with quantitative results. 
 
 ``` r
 day <- select(day,  c(- atemp, - cnt ))
@@ -123,18 +124,21 @@ vif(test0)
     ##       temp        hum  windspeed 
     ##   1.210200   1.875768   1.163155
 
-Now that the data has been cleared of any non-variables, other potiental responses, and redundacies, we can continue to exploratory data analysis.
+With a goal defined and the integrity of the data has been verified for this goal, we now perform exploratory data analysis.
 
 Exploratory Data Analysis
 -------------------------
+
+Below we use AvPlots to see how a linear model would fair with the individual variables in our data set.
 
 ``` r
 avPlots(test0)
 ```
 ![1](/assets/img/unnamed-chunk-5-1.png)
 
+Above we saw that tempature is the data that will be best for using a linear model. To further verify this we must disect the relationship each variable has with one another. This will show us the general shape variables take when compared to one another. 
 
-Here we view that the most impactful vairbale is tempature. The other variables do have correlations, but not as much as temp.
+The scatterplot matrix is useful for showing how two variables correlate and impact each other. It iss useful for transforming variables to fit our model. Viewing this, we see that many data types against one anothe have a linear fit, while other variables follow logarithmic shapes, or shapes we cannot describe.
 
 ``` r
 scatterplotMatrix(~ y + temp + windspeed + hum + factor(season) + factor(mnth) + factor(holiday) + factor(weekday) + factor(workingday) + factor(weathersit) , data =day)
@@ -148,9 +152,12 @@ scatterplotMatrix(~ y + temp + windspeed + hum + factor(season) + factor(mnth) +
 
 ![scatterplot](/assets/img/unnamed-chunk-6-1.png)
 
-This is ugly but as we see there must be transformations in order to attain a correlation between predictors and the response.
 
-### Diagnostics
+While it is ugly, we see there must be transformations in order to attain a linear model with more than one variable.
+
+### Diagnostics Part 1 
+
+Now that we done basic exploration in our data, we address the non-linear trends we found. Using 3 very important plots in statistics: Residuals vs fitted, Normal, Q-Q, and Scale-Location plots. Residual vs Fitted tells us if our redidual(the difference between the observed value and predicted value) fit as a linear model. Normal Q-Q tells us if our data comes from the same distribution, and Scale-Location tells if the residuals are evenly spread and have similar variances. 
 
 ``` r
 test1 <- test0
@@ -195,8 +202,10 @@ for( i in 1:3){
 ``` r
 par(mfrow = c( 1, 1))
 ```
+While our Normal Q-Q plot is not perfect, our data set is of size n = 731 and so the QQ-plots do not have to be perfect. This is because the Central Limit Theorem allows us to assume normality for n>500. 
 
-The residuals vs fitted and scale-location plot needs work. To this we will use MLR transformation. First checking if we need to add a constant to any numeric variable(need non-zero numbers for transformation).
+
+The Residuals vs Fitted does not meet acceptable standards, we must make it to where the line is horizontal. Scale-Location plot should also be a horizontal line to work. To  fix this, we use Multi-Linear Regression transformation. First we check if any numerical variable is zero, if it is we must add a small constant so the math works. 
 
 ``` r
 min(day$temp)
@@ -239,7 +248,7 @@ summary(diag1)
     ##                                LRT df       pval
     ## LR test, lambda = (1 1 1) 64.12643  3 7.7161e-14
 
-Adding a small constant that will have a small impact on the data we find that windspeed, should have a square root transformation.
+Adding the small constant, it has a small impact on the data and so windspeed should have a square root transformation.
 
 ``` r
 testTransform(diag1, lambda = c(1, .5, 1))
@@ -248,9 +257,9 @@ testTransform(diag1, lambda = c(1, .5, 1))
     ##                                  LRT df    pval
     ## LR test, lambda = (1 0.5 1) 3.818622  3 0.28173
 
-Here we get a small LRT, which is very good! Despite this we have a p-value of .2
+Here we get a small score for the Linear Regression Test, which is very good and indicated that the data is now following linear properties.
 
-Following with the proceedures from the MLS pdf we have:
+Below we  visualizing the relationship of our predictors.
 
 ``` r
 day_trsf <- with(day, data.frame( hum1 , sqrt(windspeed), temp ))
@@ -315,7 +324,7 @@ for( i in 1:3){
 par(mfrow = c( 1, 1))
 ```
 
-There area still issues with all 3 of our plots, despite this since our data set is of length *n* = 731 the qq-plots do not have to be perfect.
+There are still issues with our plots. 
 
 In order to fix the violations in linearity-assumptions, we will consider a response transformation:
 
@@ -351,11 +360,15 @@ for( i in 1:3){
 par(mfrow = c( 1, 1))
 ```
 
-Here we see that our plots are close to following linear assumptions. With nothing else to do we can continue to the AIC/BIC methods.
+Here we see that our plots are close to following linear assumptions. With nothing else to do we can continue to the AIC/BIC methods, to determine if the linearity violations are due the use of too many variables. In Linear-Regression, this is a forward step that prevents us from overfitting our predictors. 
 
 ### AIC/BIC Model selection.
 
-Doing the AIC/ BIC Methods, we have:
+The  Akaike information criterion(AIC) methods uses statistics to estimate out-of-sample prediction error and thereby relative quality of a sample a model.
+
+The  Bayesian Information Criterion(BIC), uses Bayesian statistics to estimate the probability of a model being true, where a lower BIC score means that a model is close to the true model. 
+
+Both of these will analyze the models at different steps, forward, backwards or from a middle scenario, to determine which will make a better linear model. In ours we go in the forward direction. 
 
 ``` r
 #Inital model
@@ -474,7 +487,7 @@ step(m0, f, direction = 'forward', k = log(n), trace = 0)
     ## windspeed.sqrt            hum1  
     ##        -23.188         -17.998
 
-The BIC method leaves us with 5 variables . In addition to this I calculated goodness of fit by hand and it was 16.6.
+The BIC method leaves us with 5 variables.
 
 Copying and pasting the results from both:
 
@@ -495,12 +508,11 @@ anova(BIC, AIC)
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-From the anova table, we accept the BIC model.
+From the Anova table, we see that the BIC model is better out of the two.
 
-Must do BIC MLR diagnostics, then make the model plots, if still not good, make a non-parallel model.
+Now that was have accepted the BIC method, we once again re-vist diagnostics on this new model. 
 
-In this chunk I will be usign the linear model BIC and factoring all categorical variables.
-
+### Diagnostics Part 2
 ``` r
 BIC.factor <- lm(formula = y.sqrt ~ temp + factor(weathersit) + factor(season) + windspeed.sqrt + hum1 , data = day)
 summary(BIC.factor)
@@ -533,7 +545,9 @@ summary(BIC.factor)
     ## Multiple R-squared:  0.5971, Adjusted R-squared:  0.5926 
     ## F-statistic: 133.7 on 8 and 722 DF,  p-value: < 2.2e-16
 
-From the summary we see that our *R*<sup>2</sup> increased and Residual standard error decreased. This is good. In the chart we have an issue with the p-value for factor(weekday)\[1\]. This is not grounds to remove it, it just implies that the slope for factor(weekday)\[1\] is possibly 0.
+To better understant if this model performs well, we analyze the R squared value. This value gives the proportion of variance in the dependent variable that is predicted from the independent variable. 
+
+From the summary we see that our *R* squared increased and Residual standard error decreased. This is good. In the chart we have an issue with the p-value for factor(weekday)\[1\]. This is not grounds to remove it, it just implies that the slope for factor(weekday)\[1\] is possibly 0.
 
 ``` r
 par(mfrow = c( 1, 3))
@@ -549,7 +563,7 @@ for( i in 1:3){
 par(mfrow = c( 1,1))
 ```
 
-Running a second diagnostic to see if we can transform and make residuals linear.
+Continuing our diagnostics we once again check for plausible transformations.
 
 ``` r
 diag2  <-  powerTransform(cbind(hum1, windspeed.sqrt , temp) ~ 1, day)
@@ -683,3 +697,7 @@ anova(BIC.factor, test3 )
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Since we have such a small p-value for model2, we reject that the slope of non-parallel interactions are 0, arriving at our final model.
+
+### Results 
+
+Using Multi-Linear Regression, we were able to accomplish our goal of determining how many people in the future will rent a bike. We did this by fitting a model with the indepented variables: tempature, season, hindspeed, humidity and type of weather(Cloudy, rainy, etc).  With these results bike sharing companies in the Washington D.C area can prepare their bike fleets for periods of high usuage and when it is the best time to target consumers in the D.C area for bike rentals. In addition, bike rental companies know when to decrease the amount of bike in the system to prevent corosion, and uncessary damages. These are just a few ways of how this model can be utilized. 
