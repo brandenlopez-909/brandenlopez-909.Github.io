@@ -18,12 +18,12 @@ Associate of Science- Mathematics
 # **Applicable Coursework/ Skills**
 
 - Machine Learning and SQL.
-- Extensive experience in Python and R
+- Extensive experience in Python and R.
 - Tableau for Data Science.
 - Financial Modeling and Valuation in Excel.
 - Financial Engineering and Compound Interest.
 - Time Series Analysis.
-- Google Compute Platform 
+- Google Compute Platform.
 - Natural Language Processing 
 
 # **Leadership Experience**
@@ -36,7 +36,7 @@ August 2016 - August 2018<br>
 <br>
 
 **Jamba Juice** - Redlands, Ca <br>
-July 2015- December 2015 & January 2017 - October 2017<br>
+July - October 2017<br>
 **Shift Leader**
 - Led weekend shifts at the busiest Jamba Juice in my district, having an annual revenue over $1,000,000.
 - Ensured the store was in proper manner, regarding money balances, store sanitation, customer wait times, and drink quality.
