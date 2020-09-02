@@ -8,7 +8,7 @@ title: Resume
 
 **University of California Santa Barbara** <br>
 Bachelor of Science - Financial Mathematics and Statistics<br>
-GPA:3.1
+GPA:3.09
 
 
 **Crafton Hills College**<br>
