@@ -30,12 +30,12 @@ The only metric to record a user updating their profile is **projects_added**. D
 ### 2. Data Exploration 
 Using Python, the data was visualized and descriptive statistics were explored. Since the data set is small, exploration for seasonality trends is ignored. Instead, I aimed to explore the relationship of each variable. The heat map in **Figure 1** shows that the correlation between variables is weak. 
 
-![Figure 1](/assests/img/Showwcase/HeatMap.png)
+![Figure 1](/assets/img/Showwcase/HeatMap.png)
 
 
 A weak correlation rules out modeling with linear regression. More so, since the sample size is small (N=299), modeling should be refrained from. In **Figure 2** the data is plotted against one another and we view distributions. 
 
-![Figure 2](/assests/img/Showwcase/Figure2.png)
+![Figure 2](/assets/img/Showwcase/Figure2.png)
 
 It's clear why there is a weak correlation and in this figure, we are able to see possible distributions. Every metric with the exception of **session_duration** is grouped near one and appears to follow a logarithmic distribution, while **session_duration** is approaching normal distribution. These insights are valuable when N increases and modeling is then capable. 
 
@@ -67,7 +67,7 @@ Lastly, we explore the chance of events occurring in the table below.
 
 There are many ways of interpreting the above table and many of those ways lead to similar results. Approximately 75.5\% of logins had users adding a project. While the table shows many goods of user engagement, two negative statistics stand out. **inactive_status** and **bug_occured** are at 57.1\% and 38.8\%. Having **inactive_status** at a majority of people only strengthens my assumption that inactive time is a common occurrence by how it's defined. What is extremely concerning is that almost 40\% of users encountered a bug. While it is not a majority, [88% of users reported they would abandon an app if they encountered bugs or glitches](https://www.applause.com/blog/app-abandonment-bug-testing#:~:text=A%20survey%20of%20over%201%2C000,least%20one%20bug%20every%20day.). To illustrate how impactful this I will put in the context of a statistics problem. 
 
-![Equation](/assests/img/Showwcase/Equation.PNG)
+![Equation](/assets/img/Showwcase/Equation.PNG)
 
 Thus bugs should be fixed as a substantial amount of Showwcase users might leave the platform. 
 
