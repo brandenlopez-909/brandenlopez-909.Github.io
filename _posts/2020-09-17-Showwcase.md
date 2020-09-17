@@ -7,8 +7,6 @@ tags: [Data Analyis, Python , User Engagement]
 comments: true
 
 ---
-
-
 # Showwcase Data Analysis: User Engagement
 
 ## I. Introduction and Motivation
