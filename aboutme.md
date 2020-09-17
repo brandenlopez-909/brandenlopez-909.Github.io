@@ -3,15 +3,11 @@ layout: page
 title: About me
 ---
 
-My name is Branden Lopez and I am a student majoring in Financial Mathematics and Statistics at the 7th best university in the nation, University of California Santa Barbara. 
+My name is Branden Lopez, I am a first generation Hispanic-American and this June I became the first person in family to earn a degree. If I did not have an unquenching thirst for challenges, it is likely I would not be here today. Enduring homelessness, racism, homophobia, and a lack of mentorship in my academic career, I have overcome and will contnue to progress.
 
-Transferring to UCSB in 2018, I came in as a Math Sciences major with a minor in Statistics. In the Summer of 2019, I took my first class in data analytics and fell in love. Since then I have joined my university's Data Science Club and have worked on numerous projects. To this day the most challenging project was building a model to detect when Tweets are advertising illicit drugs. 
-
-Outside of academia I love spending time with friends, trying new recipes, and bettering myself!
+When I’m not busy with school or work, I love to cook, read, play video games, and workout. 
 
 
 - Favoirte recipe: [Vegan Curry](https://www.theendlessmeal.com/creamy-coconut-lentil-curry/)
 
 - Favorite book: [Surely You're Joking, Mr.Feynman!](https://en.wikipedia.org/wiki/Surely_You%27re_Joking,_Mr._Feynman!)
-
-- Favorite Youtube video: [The Egg](https://www.youtube.com/watch?v=h6fcK_fRYaI&t=3s)
