@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Showwcase Data Analysis: User Engagement
+title: "Showwcase Data Analysis: User Engagement"
 subtitle: Data Analysis
 gh-repo: https://github.com/brandenlopez-909/RepositoryHub/
 tags: [Data Analyis, Python , User Engagement]
