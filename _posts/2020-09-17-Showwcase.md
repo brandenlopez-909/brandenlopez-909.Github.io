@@ -2,7 +2,7 @@
 layout: post
 title: Showwcase Data Analysis: User Engagement
 subtitle: Data Analysis
-gh-repo: https://github.com/brandenlopez-909/RepositoryHub/tree/master/Capital%20Bike%20Sharing
+gh-repo: https://github.com/brandenlopez-909/RepositoryHub/
 tags: [Data Analyis, Python , User Engagement]
 comments: true
 
