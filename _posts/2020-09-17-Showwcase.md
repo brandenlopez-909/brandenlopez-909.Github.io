@@ -39,29 +39,16 @@ It's clear why there is a weak correlation and in this figure, we are able to se
 
 ### 3. Descriptive Statistics 
 While visualization provides a quick way to process information, descriptive statistics are best at telling the story of the data. In the table below, we view the average amount of engagement each variable received.
-|Variable               |Average amount|
-|-----------------------|--------------|
-|session_projects_added |      1.618729|
-|session_likes_given    |     10.458194|
-|session_comments_given |      2.408027|
-|inactive_duration      |    731.638796|
-|bugs_in_session        |      1.237458|
-|session_duration       |   1190.414716|
-|login_amount           |      1.280936|
+
+![Chart1](/assets/img/Showwcase/Chart1.png)
 
 In the above table, we see that the average user spends 20 minutes engaged, likes 10 items per session, and comments on a fifth of those. While there is a lot of good, two negative items are present. The average user is inactive for 12 minutes and encounters at least one bug. A reason for the high inactivity could be how **inactive_duration** is recorded. Technolgy reports are often dense in information and require more time to read than a Facebook post. If a user is a slower reader they might log as "inactive" for short periods, but this is speculation and is not bolstered with data. Instead, a quantitative reason could be bugs. 
 
 **Figure 2** shows that the most inactive time occurs without a bug. In fact, the average user who does not encounter a bug will spend 10 minutes and 40 seconds inactive. This is only a minute and 20 seconds difference. 
 
 Lastly, we explore the chance of events occurring in the table below. 
-|Variable         |Chance of occurring|
-|-----------------|-------------------|
-|projects_added   | 0.7558528428093646|
-|likes_given      | 0.7123745819397993|
-|comments_given   | 0.7491638795986622|
-|inactive_status  | 0.5719063545150501|
-|bug_occured      | 0.3879598662207358|
-|multiple_sessions| 0.2508361204013378|
+![Chart2](/assets/img/Showwcase/Chart2.png)
+
 
 There are many ways of interpreting the above table and many of those ways lead to similar results. Approximately 75.5\% of logins had users adding a project. While the table shows many goods of user engagement, two negative statistics stand out. **inactive_status** and **bug_occured** are at 57.1\% and 38.8\%. Having **inactive_status** at a majority of people only strengthens my assumption that inactive time is a common occurrence by how it's defined. What is extremely concerning is that almost 40\% of users encountered a bug. While it is not a majority, [88% of users reported they would abandon an app if they encountered bugs or glitches](https://www.applause.com/blog/app-abandonment-bug-testing#:~:text=A%20survey%20of%20over%201%2C000,least%20one%20bug%20every%20day.). To illustrate how impactful this I will put in the context of a statistics problem. 
 
