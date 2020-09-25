@@ -8,7 +8,6 @@ title: Resume
 
 **University of California Santa Barbara** <br>
 Bachelor of Science - Financial Mathematics and Statistics<br>
-GPA:3.09
 
 
 **Crafton Hills College**<br>
@@ -21,10 +20,9 @@ Associate of Science- Mathematics
 - Extensive experience in Python and R.
 - Tableau for Data Science.
 - Financial Modeling and Valuation in Excel.
-- Financial Engineering and Compound Interest.
 - Time Series Analysis.
 - Google Compute Platform.
-- Natural Language Processing 
+- Natural Language Processing. 
 
 # **Leadership Experience**
 
