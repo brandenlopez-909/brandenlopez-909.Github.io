@@ -3,7 +3,7 @@
 
 # Question A
 
-## What station was the busiest on December $24^{th}$ 2016 ?
+## What station was the busiest on December 24th 2016 ?
 
 The [data](http://web.mta.info/developers/turnstile.html) is split into many files and listed on a single html page. When looking for a single file, I analyzed the formating of the data and used the Windows CTRL+F tool to look for the desired date. Loading the data with the popular data analysis tool, Pandas, filtering was done as every linked data set contains multiple dates. 
 
@@ -280,7 +280,7 @@ target_date[['ENTRIES', 'EXITS']].sum(axis=1).loc[ target_date[['ENTRIES', 'EXIT
 Overall the busiest Station on 12/24/2016 was 42 ST-PORT AUTH.
 
 # Question b
-## Create a bar plot showing the 5 stations with the least entries and exits in the 2012 - 2014 period ( 3 years). The x-axis should have the station name and the y-axis is the sum of entries $\&$ exits. Submit your work and final output documents below. ${ }^{*}$
+## Create a bar plot showing the 5 stations with the least entries and exits in the 2012 - 2014 period ( 3 years). The x-axis should have the station name and the y-axis is the sum of entries and exits. Submit your work and final output documents below.
 
 In 2014 MTA decided to restructure their data because of this we need to handle the entire date range as two subsets. The first subset will contain the well structed data, the other 'messy' data. Rather than collect hundreds of links by hand, we can use html knowledge with bs4 to automate this process. 
 
@@ -587,151 +587,7 @@ for i, date in enumerate(messy_links['dates'][::-1]):
         
 ```
 
-    Already have 2012-01-07
-    Already have 2012-01-14
-    Already have 2012-01-21
-    Already have 2012-01-28
-    Already have 2012-02-04
-    Already have 2012-02-11
-    Already have 2012-02-18
-    Already have 2012-02-25
-    Already have 2012-03-03
-    Already have 2012-03-10
-    Already have 2012-03-17
-    Already have 2012-03-24
-    Already have 2012-03-31
-    Already have 2012-04-07
-    Already have 2012-04-14
-    Already have 2012-04-21
-    Already have 2012-04-28
-    Already have 2012-05-05
-    Already have 2012-05-12
-    Already have 2012-05-19
-    Already have 2012-05-26
-    Already have 2012-06-02
-    Already have 2012-06-09
-    Already have 2012-06-16
-    Already have 2012-06-23
-    Already have 2012-06-30
-    Already have 2012-07-07
-    Already have 2012-07-14
-    Already have 2012-07-21
-    Already have 2012-07-28
-    Already have 2012-08-04
-    Already have 2012-08-11
-    Already have 2012-08-18
-    Already have 2012-08-25
-    Already have 2012-09-01
-    Already have 2012-09-08
-    Already have 2012-09-15
-    Already have 2012-09-22
-    Already have 2012-09-29
-    Already have 2012-10-06
-    Already have 2012-10-13
-    Already have 2012-10-20
-    Already have 2012-10-27
-    Already have 2012-11-03
-    Already have 2012-11-10
-    Already have 2012-11-17
-    Already have 2012-11-24
-    Already have 2012-12-01
-    Already have 2012-12-08
-    Already have 2012-12-15
-    Already have 2012-12-22
-    Already have 2012-12-29
-    Already have 2013-01-05
-    Already have 2013-01-12
-    Already have 2013-01-19
-    Already have 2013-01-26
-    Already have 2013-02-02
-    Already have 2013-02-09
-    Already have 2013-02-16
-    Already have 2013-02-23
-    Already have 2013-03-02
-    Already have 2013-03-09
-    Already have 2013-03-16
-    Already have 2013-03-23
-    Already have 2013-03-30
-    Already have 2013-04-06
-    Already have 2013-04-13
-    Already have 2013-04-20
-    Already have 2013-04-27
-    Already have 2013-05-04
-    Already have 2013-05-11
-    Already have 2013-05-18
-    Already have 2013-05-25
-    Already have 2013-06-01
-    Already have 2013-06-08
-    Already have 2013-06-15
-    Already have 2013-06-22
-    Already have 2013-06-29
-    Already have 2013-07-06
-    Already have 2013-07-13
-    Already have 2013-07-20
-    Already have 2013-07-27
-    Already have 2013-08-03
-    Already have 2013-08-10
-    Already have 2013-08-17
-    Already have 2013-08-24
-    Already have 2013-08-31
-    Already have 2013-09-07
-    Already have 2013-09-14
-    Already have 2013-09-21
-    Already have 2013-09-28
-    Already have 2013-10-05
-    Already have 2013-10-12
-    Already have 2013-10-19
-    Already have 2013-10-26
-    Already have 2013-11-02
-    Already have 2013-11-09
-    Already have 2013-11-16
-    Already have 2013-11-23
-    Already have 2013-11-30
-    Already have 2013-12-07
-    Already have 2013-12-14
-    Already have 2013-12-21
-    Already have 2013-12-28
-    Already have 2014-01-04
-    Already have 2014-01-11
-    Already have 2014-01-18
-    Already have 2014-01-25
-    Already have 2014-02-01
-    Already have 2014-02-08
-    Already have 2014-02-15
-    Already have 2014-02-22
-    Already have 2014-03-01
-    Already have 2014-03-08
-    Already have 2014-03-15
-    Already have 2014-03-22
-    Already have 2014-03-29
-    Already have 2014-04-05
-    Already have 2014-04-12
-    Already have 2014-04-19
-    Already have 2014-04-26
-    Already have 2014-05-03
-    Already have 2014-05-10
-    Already have 2014-05-17
-    Already have 2014-05-24
-    Already have 2014-05-31
-    Already have 2014-06-07
-    Already have 2014-06-14
-    Already have 2014-06-21
-    Already have 2014-06-28
-    Already have 2014-07-05
-    Already have 2014-07-12
-    Already have 2014-07-19
-    Already have 2014-07-26
-    Already have 2014-08-02
-    Already have 2014-08-09
-    Already have 2014-08-16
-    Already have 2014-08-23
-    Already have 2014-08-30
-    Already have 2014-09-06
-    Already have 2014-09-13
-    Already have 2014-09-20
-    Already have 2014-09-27
-    Already have 2014-10-04
-    Already have 2014-10-11
+    Already have it all (Rather than display it hundreds of times, I redacted it for UX)
     
 
 
@@ -1023,7 +879,7 @@ entries.set_ylabel("Frequency in hundreds of millions")
 
 
 
-![png](output_69_1.png)
+![png](/assets/img/scraping/output_69_1.png)
 
 
 
@@ -1041,7 +897,7 @@ entries.set_xlabel("Frequency in hundreds of millions")
 
 
 
-![png](output_70_1.png)
+![png](/assets/img/scraping/output_70_1.png)
 
 
 Despite the data being summed into groups. Each seperate df was summed seperatly. We need to sum them all at the end to find the final number. 
@@ -1062,7 +918,7 @@ exits.set_ylabel("Frequency in hundreds of millions")
 
 
 
-![png](output_73_1.png)
+![png](/assets/img/scraping/output_73_1.png)
 
 
 
@@ -1080,7 +936,7 @@ entries.set_xlabel("Frequency in hundreds of millions")
 
 
 
-![png](output_74_1.png)
+![png](/assets/img/scraping/output_74_1.png)
 
 
 # Summary 
