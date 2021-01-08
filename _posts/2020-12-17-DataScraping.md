@@ -879,7 +879,7 @@ entries.set_ylabel("Frequency in hundreds of millions")
 
 
 
-![png](/assets/img/scraping/output_69_1.png)
+![png](/assets/img/Scraping/output_69_1.png)
 
 
 
@@ -897,7 +897,7 @@ entries.set_xlabel("Frequency in hundreds of millions")
 
 
 
-![png](/assets/img/scraping/output_70_1.png)
+![png](/assets/img/Scraping/output_70_1.png)
 
 
 Despite the data being summed into groups. Each seperate df was summed seperatly. We need to sum them all at the end to find the final number. 
@@ -918,7 +918,7 @@ exits.set_ylabel("Frequency in hundreds of millions")
 
 
 
-![png](/assets/img/scraping/output_73_1.png)
+![png](/assets/img/Scraping/output_73_1.png)
 
 
 
@@ -936,7 +936,7 @@ entries.set_xlabel("Frequency in hundreds of millions")
 
 
 
-![png](/assets/img/scraping/output_74_1.png)
+![png](/assets/img/Scraping/output_74_1.png)
 
 
 # Summary 
