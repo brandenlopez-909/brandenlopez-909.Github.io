@@ -3,28 +3,26 @@ layout: page
 title: Resume
 ---
 
-
 # Education
 
 **University of California Santa Barbara** <br>
 Bachelor of Science - Financial Mathematics and Statistics<br>
-GPA:3.09
 
 
 **Crafton Hills College**<br>
 Associate of Science- Mathematics
 <br> GPA: 3.58
 
-# **Applicable Coursework/ Skills**
+#  **Skills**
 
-- Machine Learning and SQL.
+- SQL and MySQL.
+- Unix/Linux Bash
 - Extensive experience in Python and R.
 - Tableau for Data Science.
 - Financial Modeling and Valuation in Excel.
-- Financial Engineering and Compound Interest.
 - Time Series Analysis.
 - Google Compute Platform.
-- Natural Language Processing 
+- Natural Language Processing. 
 
 # **Leadership Experience**
 
@@ -36,7 +34,7 @@ August 2016 - August 2018<br>
 <br>
 
 **Jamba Juice** - Redlands, Ca <br>
-July - October 2017<br>
+July 2015 - October 2017<br>
 **Shift Leader**
 - Led weekend shifts at the busiest Jamba Juice in my district, having an annual revenue over $1,000,000.
 - Ensured the store was in proper manner, regarding money balances, store sanitation, customer wait times, and drink quality.

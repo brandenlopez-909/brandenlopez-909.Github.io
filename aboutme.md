@@ -11,3 +11,6 @@ When I’m not busy with school or work, I love to cook, read, play video games,
 - Favoirte recipe: [Vegan Curry](https://www.theendlessmeal.com/creamy-coconut-lentil-curry/)
 
 - Favorite book: [Surely You're Joking, Mr.Feynman!](https://en.wikipedia.org/wiki/Surely_You%27re_Joking,_Mr._Feynman!)
+
+# Contact Me
+- Email: blopez4148@gmail.com
