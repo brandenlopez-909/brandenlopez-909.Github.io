@@ -5,9 +5,13 @@ title: Resume
 
 # Education
 
+**San Jose State University** <br>
+Master of Science - Data Science <br>
+
+
 **University of California Santa Barbara** <br>
 Bachelor of Science - Financial Mathematics and Statistics<br>
-
+<br> GPA: 3.1
 
 **Crafton Hills College**<br>
 Associate of Science- Mathematics
@@ -17,7 +21,7 @@ Associate of Science- Mathematics
 
 - SQL and MySQL.
 - Unix/Linux Bash
-- Extensive experience in Python and R.
+- Extensive experience in Python, R, and Java.
 - Tableau for Data Science.
 - Financial Modeling and Valuation in Excel.
 - Time Series Analysis.
