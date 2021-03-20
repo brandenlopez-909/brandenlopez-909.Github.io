@@ -1,9 +1,8 @@
 ---
 layout: page
-title: About me
+title: About Me
 ---
-
-My name is Branden Lopez, I am a first generation Hispanic-American and this June I became the first person in family to earn a degree. If I did not have an unquenching thirst for challenges, it is likely I would not be here today. Enduring homelessness, racism, homophobia, and a lack of mentorship in my academic career, I have overcome and will contnue to progress.
+My name is Branden Lopez, I am a first-generation Hispanic-American and hold a degree in Financial Mathematics and Statistics, this January I joined San Jose State's Master in Data Science program. I chose this career path because it is a principle that I must constantly challenge myself and exercise my problem-solving skills. Data Science allows me to do both, it requires me to challenge myself by constantly learning new materials, and requires me to apply the information to everyday data. If I did not have an unquenching thirst for challenges, it is likely I would not be here today. Enduring homelessness, racism, and other low-income barriers that many other minorities have faced. 
 
 When I’m not busy with school or work, I love to cook, read, play video games, and workout. 
 
