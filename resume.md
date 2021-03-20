@@ -6,16 +6,14 @@ title: Resume
 # Education
 
 **San Jose State University** <br>
-Master of Science - Data Science <br>
-
+Master of Science - Data Science
 
 **University of California Santa Barbara** <br>
-Bachelor of Science - Financial Mathematics and Statistics<br>
-<br> GPA: 3.1
+Bachelor of Science - Financial Mathematics and Statistics
 
 **Crafton Hills College**<br>
 Associate of Science- Mathematics
-<br> GPA: 3.58
+GPA: 3.58
 
 #  **Skills**
 
